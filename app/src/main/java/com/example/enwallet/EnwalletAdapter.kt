@@ -14,8 +14,9 @@ class EnwalletAdapter(val enwalletList: List<Enwallet>):RecyclerView.Adapter<Enw
     override fun onBindViewHolder(holder: EnwalleteViewHolder, position: Int) {
         val article = enwalletList[position]
         holder.tvMoney.text = enwallet.money
-        holder.tv.text = enwalletList
-        holder.Link .text=article.link
-        holder.tvTitle.text = article.title
-        holder
+        holder.tvMoneyOut = enwallet.moneyout
+        holder.tvBalance=enwallet.balance
+        holder.tvTransaction = enwallet.transaction
+        holder.tvBusfare = enwallet.busfare
+        holder tvkes = enwallet.kes
     }
