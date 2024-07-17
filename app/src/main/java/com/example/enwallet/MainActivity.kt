@@ -16,37 +16,31 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.rvEnwallet.layoutManager = LinearLayoutManager(this)
-        displaInfo()
+        displayInfo()
+
 
 
     }
 
-    fun displaInfo(){
-        fun displayInfo(){
+    fun displayInfo(){
 
-            var  enwallet1= Enwallet("kes 4500","kes4000","kes 400","kes 4500","kes 40000","kes 4000","kes 3000","kes 4000","kes 5000")
+            val enwallet1= Enwallet("kes 4500","kes4000","kes 400")
+            val enwallet2= Enwallet("kes 4500","kes4000","kes 400")
+            val enwallet3= Enwallet("kes 4500","kes4000","kes 400")
+            val enwallet4= Enwallet("kes 4500","kes4000","kes 400")
+            val enwallet5 = Enwallet("kes 4500","kes4000","kes 400")
+            val enwallet6= Enwallet("kes 4500","kes4000","kes 400")
+            val enwallet7= Enwallet("kes 4500","kes4000","kes 400")
 
-            var  enwallet2= Enwallet("kes 4500","kes4000","kes 400","kes 4500","kes 40000","kes 4000","kes 3000","kes 4000","kes 5000")
-4
-            var  enwallet3= Enwallet("kes 4500","kes4000","kes 400","kes 4500","kes 40000","kes 4000","kes 3000","kes 4000","kes 5000")
-
-            var enwallet4= Enwallet("kes 4500","kes4000","kes 400","kes 4500","kes 40000","kes 4000","kes 3000","kes 4000","kes 5000")
-
-            var enwallet5 = Enwallet("kes 4500","kes4000","kes 400","kes 4500","kes 40000","kes 4000","kes 3000","kes 4000","kes 5000")
-
-            var enwallet6= Enwallet("kes 4500","kes4000","kes 400","kes 4500","kes 40000","kes 4000","kes 3000","kes 4000","kes 5000")
-
-            var enwallet7= Enwallet("kes 4500","kes4000","kes 400","kes 4500","kes 40000",
+        val wallet = listOf(enwallet1, enwallet2, enwallet3, enwallet4, enwallet5, enwallet6, enwallet7)
+        val enwalletAdapter = EnwalletAdapter(wallet)
+        binding.rvEnwallet.adapter = enwalletAdapter
 
 
 
 
-            val enwalletList = listOf(enwallet1,enwallet2,enwallet3,enwallet4,enwallet5,enwallet6,enwallet7)
-            val enwalletAdapter = EnwalletAdapter(enwalletList )
-            binding.rvEnwallet.adapter = enwalletAdapter
-
-
-        }
     }
+
+}
 
 

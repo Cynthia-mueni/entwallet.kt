@@ -16,20 +16,17 @@ class EnwalletAdapter(val enwalletList: List<Enwallet>):RecyclerView.Adapter<Enw
     }
     override fun onBindViewHolder(holder: EnwalletViewHolder, position: Int) {
         val enwallet = enwalletList[position]
-        holder.tvMoney.text = enwallet.money
-        holder.tvMoneyout.text = enwallet.moneyout
-        holder.tvBalance.text = enwallet.balance
-        holder.tvBusfare.text = enwallet.busfare
         holder.tvTransaction.text = enwallet.transaction
+        holder.tvBalance.text = enwallet.amount
+        holder.tvIncome.text = enwallet.date
 
     }
 
 }
 
 class EnwalletViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
-    var tvMoney = itemView.findViewById<TextView>(R.id.tvMoney)
-    var tvMoneyout= itemView.findViewById<TextView>(R.id.tvMoneyout)
-    var tvBalance = itemView.findViewById<TextView>(R.id.tvBalance)
-    var tvBusfare = itemView.findViewById<TextView>(R.id.tvBusfare)
-    var tvTransaction= itemView.findViewById<TextView>(R.id.tvTransaction)
+    var tvTransaction = itemView.findViewById<TextView>(R.id.tvSalary)
+    var tvBalance= itemView.findViewById<TextView>(R.id.tvAmount)
+    var tvIncome = itemView.findViewById<TextView>(R.id.tvDate)
+
 }
